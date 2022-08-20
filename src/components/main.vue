@@ -115,6 +115,10 @@ export default {
       ]
     }
   },
+  metaInfo: {
+    title: 'AGOSTÓN 西班牙野豬葡萄酒',
+    lang: 'zh-Hant'
+  },
   mounted() {
     window.addEventListener('resize', () => {
       this.vw = window.innerWidth
