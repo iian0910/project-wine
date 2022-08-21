@@ -10,10 +10,10 @@ module.exports = {
         .use("image-webpack-loader")
         .loader("image-webpack-loader")
         .options({
-          mozjpeg: { progressive: true, quality: 65 },
-          optipng: { enabled: false },
-          pngquant: { quality: [0.65, 0.9], speed: 4 },
-          gifsicle: { interlaced: false },
+          mozjpeg: { progressive: true, quality: 80 },  // JPEG 圖片優化
+          optipng: { enabled: false },                  // PNG 圖片優化
+          pngquant: { quality: [0.65, 0.9], speed: 4 }, // PNG 圖片優化 (推薦)
+          gifsicle: { interlaced: false },              // GIF 圖片優化
         })
         .end();
   },
