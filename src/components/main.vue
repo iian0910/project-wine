@@ -213,8 +213,8 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .production-area::before {
-    height: 3px;
-  }
+    width: 80%;
+}
 }
 .section-first::before {
   display: none;
