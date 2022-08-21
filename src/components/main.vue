@@ -16,7 +16,7 @@
               <p class="text mb-8">{{item.info04}}</p>
               <p class="text">{{item.info05}}</p>
             </div>
-            <div class="info-btn btn-hover" @click="scroll">立即詢問</div>
+            <div class="info-btn btn-hover" @click="scroll">立即訂購</div>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
               </div>
               <div class="form-btn-group">
                 <button type="button" class="form-btn clear text-hover" @click="clearInfo">清空</button>
-                <button type="button" class="form-btn send btn-hover">送出</button>
+                <button type="button" class="form-btn send btn-hover" data-bs-toggle="modal" data-bs-target="#myDialog">送出</button>
               </div>
             </div>
           </div>
@@ -61,6 +61,26 @@
       </div>
     </div>
     <div class="footer">Copyright © 2020</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myDialog" tabindex="-1" aria-labelledby="myDialogModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/logo.png" class="img-fluid dialog-img" alt="">
+          </div>
+          <div class="modal-body">
+            <div class="dialog-info mb-24">感謝您的訂購，十夯提醒您:
+            </div>
+            <div class="dialog-info mb-16">父母，監護人，或是其他照顧者，不得提供酒類未滿18歲的未成年人，否則將被處以 $10,000 到 $15,000 新台幣的罰款。</div>
+            <div class="dialog-info">任何人均不得提供酒類給未滿18歲的人。</div>
+          </div>
+          <button type="button" class="btn btn-warning check-btn" data-bs-dismiss="modal">我知道了</button>
+        </div>
+      </div>
+    </div>
+    <!---->
+
   </div>
 </template>
 
@@ -148,7 +168,7 @@ export default {
       this.formInfo.email = '';
       this.formInfo.userPhone = '';
       this.formInfo.contact = '';
-    },
+    }
   }
 }
 </script>
@@ -319,22 +339,63 @@ export default {
 .text-hover:hover {
   color: $ag-danger-hover-red;
 }
-.mb-8 {
-  margin-bottom: 8px;
+.check-btn {
+  display: inline-block;
 }
-.mb-16 {
-  margin-bottom: 16px;
+.modal-dialog {
+  max-width: 620px;
+  .modal-header {
+    border-bottom: none;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    .dialog-img {
+      width: 300px;
+      height: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .modal-body {
+    padding: 20px 120px 40px 120px;
+  }
+  .dialog-info {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: black;
+    text-align: left;
+  }
+  .check-btn {
+    padding: 10px 40px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: white;
+  }
 }
-.mb-20 {
-  margin-bottom: 20px;
-}
-.mb-24 {
-  margin-bottom: 24px;
-}
-.mb-30 {
-  margin-bottom: 30px;
-}
-.mb-60 {
-  margin-bottom: 60px;
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    max-width: 100%;
+    .modal-header {
+      padding-bottom: 10px;
+      .dialog-img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .modal-body {
+      padding: 10px 20px 40px 20px;
+    }
+    .dialog-info {
+      font-size: 16px;
+    }
+    .check-btn {
+      padding: 10px 20px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
 }
 </style>

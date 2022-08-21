@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style>
-
+.modal-open {
+  padding-right: 0 !important;
+}
 </style>
