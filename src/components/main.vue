@@ -48,7 +48,7 @@
               <div class="row align-items-center mb-60">
                 <label for="contact" class="col-md-3 col-form-label label-title">留言</label>
                 <div class="col-md-9">
-                  <textarea class="form-control label-input" id="contact" rows="3" style="resize:none" v-model="formInfo.contact"></textarea>
+                  <textarea class="form-control label-input" id="contact" rows="3" style="resize:none; height:200px" v-model="formInfo.contact"></textarea>
                 </div>
               </div>
               <div class="form-btn-group">
