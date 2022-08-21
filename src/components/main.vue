@@ -30,29 +30,29 @@
               <div class="row align-items-center mb-20">
                 <label for="user-name" class="col-md-3 col-form-label label-title">訂購姓名</label>
                 <div class="col-md-9">
-                  <input type="text" class="form-control label-input" id="user-name">
+                  <input type="text" class="form-control label-input" id="user-name" v-model="formInfo.userName">
                 </div>
               </div>
               <div class="row align-items-center mb-20">
                 <label for="user-email" class="col-md-3 col-form-label label-title">電子信箱</label>
                 <div class="col-md-9">
-                  <input type="email" class="form-control label-input" id="user-email">
+                  <input type="email" class="form-control label-input" id="user-email" v-model="formInfo.email">
                 </div>
               </div>
               <div class="row align-items-center mb-20">
                 <label for="user-phone" class="col-md-3 col-form-label label-title">連絡電話</label>
                 <div class="col-md-9">
-                  <input type="tel" class="form-control label-input" id="user-phone">
+                  <input type="tel" class="form-control label-input" id="user-phone" v-model="formInfo.userPhone">
                 </div>
               </div>
               <div class="row align-items-center mb-60">
                 <label for="contact" class="col-md-3 col-form-label label-title">留言</label>
                 <div class="col-md-9">
-                  <textarea class="form-control label-input" id="contact" rows="3" style="resize:none"></textarea>
+                  <textarea class="form-control label-input" id="contact" rows="3" style="resize:none" v-model="formInfo.contact"></textarea>
                 </div>
               </div>
               <div class="form-btn-group">
-                <button type="button" class="form-btn clear text-hover">清空</button>
+                <button type="button" class="form-btn clear text-hover" @click="clearInfo">清空</button>
                 <button type="button" class="form-btn send btn-hover">送出</button>
               </div>
             </div>
@@ -112,7 +112,13 @@ export default {
           info04: '酒精濃度：14%',
           info05: '未滿 18 歲禁止飲酒，也請勿購買！！',
         },
-      ]
+      ],
+      formInfo: {
+        userName: '',
+        email: '',
+        userPhone: '',
+        contact: ''
+      }
     }
   },
   metaInfo: {
@@ -136,7 +142,13 @@ export default {
   methods: {
     scroll(){
       document.querySelector("#form").scrollIntoView(true);
-    }
+    },
+    clearInfo () {
+      this.formInfo.userName = '';
+      this.formInfo.email = '';
+      this.formInfo.userPhone = '';
+      this.formInfo.contact = '';
+    },
   }
 }
 </script>
