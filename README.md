@@ -17,7 +17,7 @@ components  : dialog / main
 
 ### Demo
 ```
-https://iian0910.github.io/F2E_Week1/
+https://iian0910.github.io/project-wine/
 ```
 
 ### 使用技術
