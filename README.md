@@ -1,24 +1,27 @@
-# agoston
-
-## Project setup
+## 切版練習 - 西班牙野豬葡萄酒
 ```
-npm install
+bootstrap 切版練習
 ```
 
-### Compiles and hot-reloads for development
+### 系統說明
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+vue   : v2.6.11
+node  : v12.18.2
 ```
 
-### Lints and fixes files
+### 資料夾說明
 ```
-npm run lint
+assets      : image / scss
+components  : dialog / main
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Demo
+```
+https://iian0910.github.io/F2E_Week1/
+```
+
+### 使用技術
+```
+Vue 2
+Bootstrap 5
+```

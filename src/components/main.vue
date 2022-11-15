@@ -67,7 +67,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <img src="../assets/logo.png" class="img-fluid dialog-img" alt="">
+            <img src="../assets/image/logo.png" class="img-fluid dialog-img" alt="">
           </div>
           <div class="modal-body">
             <div class="dialog-info mb-24">感謝您的訂購，十夯提醒您:
@@ -85,10 +85,11 @@
 </template>
 
 <script>
-import wine1 from "../assets/img01.jpg";
-import wine2 from "../assets/img02.jpg";
-import wine3 from "../assets/img03.jpg";
-import wine4 from "../assets/img04.jpg";
+// import wine1 from "../assets/img01.jpg";
+// import wine2 from "../assets/img02.jpg";
+// import wine3 from "../assets/img03.jpg";
+// import wine4 from "../assets/img04.jpg";
+import ImgPath from '@/assets/js/imgPath.js';
 
 export default {
   data(){
@@ -97,7 +98,7 @@ export default {
       mobileSize: 768,
       wineData: [
         {
-          img: wine1,
+          img: ImgPath.wine1,
           title: 'AGOSTÓN 白野豬',
           info01: '清新爽口，酸度適中，帶著輕甜柑橘香氣與豐沛的花香，中間有著大自然礦物氣息，白酒政該如此經典。',
           info02: '清爽的酒香正該搭配清爽的美食，也可以與鹹酥雞作搭配，讓彼此更加分。',
@@ -106,7 +107,7 @@ export default {
           info05: '未滿 18 歲禁止飲酒，也請勿購買！！',
         },
         {
-          img: wine2,
+          img: ImgPath.wine2,
           title: 'AGOSTÓN 粉紅豬',
           info01: '輕輕的果香，是野生的蘋果，淡淡的玫瑰中和了源自發酵的丹寧口感，雀躍之中帶著成熟的氣息。',
           info02: '在中餐，不可或缺的粉紅酒，中西合併迸出新滋味。',
@@ -115,7 +116,7 @@ export default {
           info05: '未滿 18 歲禁止飲酒，也請勿購買！！',
         },
         {
-          img: wine3,
+          img: ImgPath.wine3,
           title: 'AGOSTÓN 紅野豬',
           info01: '莓果與黑李子的搭配，泛著巧克力甘苦的風味，尾韻飄散著香草的氣息。',
           info02: '相當適合與燒烤一起搭配，冰鎮一下風味更佳。',
@@ -124,7 +125,7 @@ export default {
           info05: '未滿 18 歲禁止飲酒，也請勿購買！！',
         },
         {
-          img: wine4,
+          img: ImgPath.wine4,
           title: 'AGOSTÓN 黃野豬',
           info01: '多汁葡萄的口感豐富整個口腔，有著黑櫻桃、黑莓等獨特濃郁水果香，宛如徜徉在森林之境中，舒適輕鬆。',
           info02: '相當適合與口味比較重的餐點一起搭配，冰鎮一下風味更佳。',
@@ -141,10 +142,13 @@ export default {
       }
     }
   },
-  metaInfo: {
-    title: 'AGOSTÓN 西班牙野豬葡萄酒',
-    lang: 'zh-Hant'
-  },
+  // metaInfo: {
+  //   title: 'AGOSTÓN 西班牙野豬葡萄酒',
+  //   meta: [
+  //     { property: 'og:description', name: 'description', content: 'OG 測試描述'},
+  //     { property: 'og:image', name: 'image', content: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fotojet-69-1573033302.jpg?crop=0.502xw:1.00xh;0,0&resize=640:*'},
+  //   ]
+  // },
   mounted() {
     window.addEventListener('resize', () => {
       this.vw = window.innerWidth
@@ -180,7 +184,7 @@ export default {
   width: 100%;
   height: 0px;
   padding-top: 30%;
-  background-image: url('../assets/banner.jpg');
+  background-image: url('../assets/image/banner.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -188,7 +192,7 @@ export default {
 @media screen and (max-width: 768px) {
   .banner {
     padding-top: 133%;
-    background-image: url('../assets/banner_mo.jpg');
+    background-image: url('../assets/image/banner_mo.jpg');
   }
 }
 .section {
